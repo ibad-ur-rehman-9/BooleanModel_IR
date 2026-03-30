@@ -188,7 +188,6 @@ The web interface is built with Flask (backend) and plain HTML/CSS/JS (frontend)
 ## Author
 
 **Ibad Ur Rehman**
-Student ID: 23k0517
-BS Computer Science — Semester 6
-FAST-NUCES, Karachi
-Email: connect.ibadurrehman@gmail.com
+- BS Computer Science - Semester 6
+- FAST-NUCES, Karachi
+- Email: connect.ibadurrehman@gmail.com
