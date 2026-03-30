@@ -3,13 +3,13 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 A full Boolean Information Retrieval system built on a corpus of **56 Trump Speeches (June 2015 – November 2016)**. The system supports preprocessing, inverted and positional indexing, boolean query processing, proximity queries, and a web-based GUI.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 ```
 IR_Assignment1/
 │
@@ -27,7 +27,7 @@ IR_Assignment1/
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Python 3.x
@@ -47,7 +47,7 @@ nltk.download('punkt')
 
 ---
 
-## 🚀 Running the Project
+## Running the Project
 
 ### 1. Build the Indexes (run once)
 
@@ -69,7 +69,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔧 Preprocessing Pipeline
+## Preprocessing Pipeline
 
 Each document goes through the following steps before indexing:
 
@@ -84,7 +84,7 @@ Each document goes through the following steps before indexing:
 
 ---
 
-## 📚 Index Structures
+## Index Structures
 
 ### Inverted Index
 Maps each term to a sorted list of document IDs where it appears.
@@ -106,7 +106,7 @@ Both indexes are saved as `.json` files and loaded on startup — no need to reb
 
 ---
 
-## 🔍 Query Types Supported
+## Query Types Supported
 
 ### 1. Single Term
 ```
@@ -149,29 +149,32 @@ develop solutions /1
 
 ---
 
-## 🧪 Query Results vs Gold Standard
+## Query Results vs Gold Standard
 
 | Query | Expected | Match |
 |---|---|---|
-| `running` | {0,1,2,3,4,5,6,8,9,...} | ✅ |
-| `NOT hammer` | {0,1,2,3,4,5,6,7,...} | ✅ |
-| `actions AND wanted` | {0,1,2,3,5,7,9,...} | ✅ |
-| `united OR plane` | {0,1,2,3,4,5,6,...} | ✅ |
-| `pakistan OR afganistan OR aid` | {3,16,22,29,37,...} | ✅ |
-| `biggest AND (near OR box)` | {4,6,18,43,44,...} | ✅ |
-| `box AND (united OR year)` | {4,9,18,23,25,...} | ✅ |
-| `biggest AND (plane OR wanted OR hour)` | {0,1,2,4,6,7,...} | ✅ |
-| `after years /1` | {6,7,44} | ⚠️ |
-| `develop solutions /1` | {5,32} | ✅ |
-| `keep out /2` | {20,24,39,40,51} | ⚠️ |
+| `running` | {0,1,2,3,4,5,6,8,9,...} | Match |
+| `NOT hammer` | {0,1,2,3,4,5,6,7,...} | Match |
+| `actions AND wanted` | {0,1,2,3,5,7,9,...} | Match |
+| `united OR plane` | {0,1,2,3,4,5,6,...} | Match |
+| `pakistan OR afganistan OR aid` | {3,16,22,29,37,...} | Match |
+| `biggest AND (near OR box)` | {4,6,18,43,44,...} | Match |
+| `box AND (united OR year)` | {4,9,18,23,25,...} | Match |
+| `biggest AND (plane OR wanted OR hour)` | {0,1,2,4,6,7,...} | Match |
+| `after years /1` | {6,7,44} | Mismatch |
+| `develop solutions /1` | {5,32} | Match |
+| `keep out /2` | {20,24,39,40,51} | Mismatch |
 
 > ⚠️ Minor discrepancies in some proximity queries are due to preprocessing differences between our pipeline and the gold standard's pipeline. Our implementation correctly identifies documents where the terms appear within k positions — the position counting differs slightly due to stopword handling during index construction.
 
 ---
 
-## 🌐 Web GUI
+## Web GUI
 
 The web interface is built with Flask (backend) and plain HTML/CSS/JS (frontend).
+
+<img width="1172" height="927" alt="image" src="https://github.com/user-attachments/assets/a39906c4-379c-49ab-8354-afc0942a922c" />
+
 
 **Features:**
 - Search bar supporting all query types
@@ -182,9 +185,10 @@ The web interface is built with Flask (backend) and plain HTML/CSS/JS (frontend)
 
 ---
 
-## 👤 Author
+## Author
 
 **Ibad Ur Rehman**
 Student ID: 23k0517
 BS Computer Science — Semester 6
 FAST-NUCES, Karachi
+Email: connect.ibadurrehman@gmail.com
